@@ -1,6 +1,6 @@
 {
   "name": "@mongolyy/storybook-practice",
-  "version": "0.0.2",
+  "version": "0.0.5-rc1",
   "description": "",
   "repository": "https://github.com/mongolyy/storybook-practice",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json && cp src/stories/*.css dist/stories/"
   },
   "files": ["dist", "src", "README.md"],
   "publishConfig": {
