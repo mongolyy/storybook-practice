@@ -2,6 +2,7 @@
   "name": "@mongolyy/storybook-practice",
   "version": "0.0.2",
   "description": "",
+  "repository": "https://github.com/mongolyy/storybook-practice",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
