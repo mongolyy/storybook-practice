@@ -2,11 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
+type ButtonProps = {
+  primary?: boolean;
+  backgroundColor?: string;
+  size?: 'small' | 'medium' | 'large';
+  label: string;
+  onClick?: () => void;
+};
+
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  // @ts-ignore
   return (
     <button
       type="button"
@@ -14,11 +23,6 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
   );
 };
@@ -47,7 +51,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
+  backgroundColor: undefined,
   primary: false,
   size: 'medium',
   onClick: undefined,

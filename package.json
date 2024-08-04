@@ -1,15 +1,18 @@
 {
-  "name": "storybook-practice",
-  "version": "1.0.0",
+  "name": "@mongolyy/storybook-practice",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "author": "mongolyy",
   "license": "ISC",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
