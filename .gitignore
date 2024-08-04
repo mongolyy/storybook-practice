@@ -1,5 +1,8 @@
 node_modules/
 .next/
 .cache/
+dist/
 
 .idea/
+
+.private-script.txt
